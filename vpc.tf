@@ -12,7 +12,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "subnet_1" {
   vpc_id     = aws_vpc.main.id
   cidr_block = cidrsubnet(aws_vpc.main.cidr_block, 6, 1)
-#   cidr_block = "10.0.1.0/24"
+  #   cidr_block = "10.0.1.0/24"
 
   tags = {
     Name = "subnet_1"
@@ -23,7 +23,7 @@ resource "aws_subnet" "subnet_1" {
 resource "aws_subnet" "subnet_2" {
   vpc_id     = aws_vpc.main.id
   cidr_block = cidrsubnet(aws_vpc.main.cidr_block, 6, 2)
-#   cidr_block = "10.0.1.0/24"
+  #   cidr_block = "10.0.1.0/24"
 
   tags = {
     Name = "subnet_2"
@@ -55,7 +55,7 @@ resource "aws_instance" "web" {
     Name = "Server-1"
   }
 
-#   lifecycle {
-#       prevent_destroy = true
-#   }
+  #   lifecycle {
+  #       prevent_destroy = true
+  #   }
 }
