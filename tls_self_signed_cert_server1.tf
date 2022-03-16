@@ -2,8 +2,8 @@
 resource "tls_private_key" "pinkloop_server1" {
   # algorithm   = "ECDSA"
   # ecdsa_curve = "P384"
-  algorithm   = "RSA"
-  rsa_bits = "2048"
+  algorithm = "RSA"
+  rsa_bits  = "2048"
 }
 
 # certificate request
